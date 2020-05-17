@@ -15,7 +15,7 @@
 		CC3CDB3824717DBE00F20ACC /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC3CDB3724717DBE00F20ACC /* NetworkExtension.framework */; };
 		CC3CDB3C24717DBE00F20ACC /* FilterPacketProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3CDB3B24717DBE00F20ACC /* FilterPacketProvider.m */; };
 		CC3CDB3E24717DBF00F20ACC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3CDB3D24717DBE00F20ACC /* main.m */; };
-		CC3CDB4324717DBF00F20ACC /* io.github.dyumin.Networkman.netd.systemextension in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = CC3CDB3524717DBE00F20ACC /* io.github.dyumin.Networkman.netd.systemextension */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CC3CDB4324717DBF00F20ACC /* io.github.dyumin.networkman.netd.systemextension in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = CC3CDB3524717DBE00F20ACC /* io.github.dyumin.networkman.netd.systemextension */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +35,7 @@
 			dstPath = "$(SYSTEM_EXTENSIONS_FOLDER_PATH)";
 			dstSubfolderSpec = 16;
 			files = (
-				CC3CDB4324717DBF00F20ACC /* io.github.dyumin.Networkman.netd.systemextension in Embed System Extensions */,
+				CC3CDB4324717DBF00F20ACC /* io.github.dyumin.networkman.netd.systemextension in Embed System Extensions */,
 			);
 			name = "Embed System Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,7 +53,7 @@
 		CC3CDB11247174EF00F20ACC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC3CDB12247174EF00F20ACC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CC3CDB14247174EF00F20ACC /* Networkman.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Networkman.entitlements; sourceTree = "<group>"; };
-		CC3CDB3524717DBE00F20ACC /* io.github.dyumin.Networkman.netd.systemextension */ = {isa = PBXFileReference; explicitFileType = "wrapper.system-extension"; includeInIndex = 0; path = io.github.dyumin.Networkman.netd.systemextension; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC3CDB3524717DBE00F20ACC /* io.github.dyumin.networkman.netd.systemextension */ = {isa = PBXFileReference; explicitFileType = "wrapper.system-extension"; includeInIndex = 0; path = io.github.dyumin.networkman.netd.systemextension; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC3CDB3724717DBE00F20ACC /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
 		CC3CDB3A24717DBE00F20ACC /* FilterPacketProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilterPacketProvider.h; sourceTree = "<group>"; };
 		CC3CDB3B24717DBE00F20ACC /* FilterPacketProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilterPacketProvider.m; sourceTree = "<group>"; };
@@ -95,7 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				CC3CDB03247174ED00F20ACC /* Networkman.app */,
-				CC3CDB3524717DBE00F20ACC /* io.github.dyumin.Networkman.netd.systemextension */,
+				CC3CDB3524717DBE00F20ACC /* io.github.dyumin.networkman.netd.systemextension */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -172,7 +172,7 @@
 			);
 			name = netd;
 			productName = netd;
-			productReference = CC3CDB3524717DBE00F20ACC /* io.github.dyumin.Networkman.netd.systemextension */;
+			productReference = CC3CDB3524717DBE00F20ACC /* io.github.dyumin.networkman.netd.systemextension */;
 			productType = "com.apple.product-type.system-extension";
 		};
 /* End PBXNativeTarget section */
@@ -397,7 +397,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.dyumin.Networkman;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.dyumin.networkman;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -417,7 +417,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.dyumin.Networkman;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.dyumin.networkman;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -436,7 +436,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.dyumin.Networkman.netd;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.dyumin.networkman.netd;
 				PRODUCT_NAME = "$(inherited)";
 				SKIP_INSTALL = YES;
 			};
@@ -456,7 +456,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.dyumin.Networkman.netd;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.dyumin.networkman.netd;
 				PRODUCT_NAME = "$(inherited)";
 				SKIP_INSTALL = YES;
 			};
