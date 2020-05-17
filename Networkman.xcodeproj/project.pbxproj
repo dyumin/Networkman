@@ -12,7 +12,35 @@
 		CC3CDB0D247174EF00F20ACC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC3CDB0C247174EF00F20ACC /* Assets.xcassets */; };
 		CC3CDB10247174EF00F20ACC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC3CDB0E247174EF00F20ACC /* Main.storyboard */; };
 		CC3CDB13247174EF00F20ACC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3CDB12247174EF00F20ACC /* main.m */; };
+		CC3CDB3824717DBE00F20ACC /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC3CDB3724717DBE00F20ACC /* NetworkExtension.framework */; };
+		CC3CDB3C24717DBE00F20ACC /* FilterPacketProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3CDB3B24717DBE00F20ACC /* FilterPacketProvider.m */; };
+		CC3CDB3E24717DBF00F20ACC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3CDB3D24717DBE00F20ACC /* main.m */; };
+		CC3CDB4324717DBF00F20ACC /* io.github.dyumin.Networkman.netd.systemextension in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = CC3CDB3524717DBE00F20ACC /* io.github.dyumin.Networkman.netd.systemextension */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CC3CDB4124717DBF00F20ACC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC3CDAFB247174ED00F20ACC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC3CDB3424717DBE00F20ACC;
+			remoteInfo = netd;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CC3CDB4424717DBF00F20ACC /* Embed System Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(SYSTEM_EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				CC3CDB4324717DBF00F20ACC /* io.github.dyumin.Networkman.netd.systemextension in Embed System Extensions */,
+			);
+			name = "Embed System Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CC3CDB03247174ED00F20ACC /* Networkman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Networkman.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -25,6 +53,13 @@
 		CC3CDB11247174EF00F20ACC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC3CDB12247174EF00F20ACC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CC3CDB14247174EF00F20ACC /* Networkman.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Networkman.entitlements; sourceTree = "<group>"; };
+		CC3CDB3524717DBE00F20ACC /* io.github.dyumin.Networkman.netd.systemextension */ = {isa = PBXFileReference; explicitFileType = "wrapper.system-extension"; includeInIndex = 0; path = io.github.dyumin.Networkman.netd.systemextension; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC3CDB3724717DBE00F20ACC /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		CC3CDB3A24717DBE00F20ACC /* FilterPacketProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilterPacketProvider.h; sourceTree = "<group>"; };
+		CC3CDB3B24717DBE00F20ACC /* FilterPacketProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilterPacketProvider.m; sourceTree = "<group>"; };
+		CC3CDB3D24717DBE00F20ACC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CC3CDB3F24717DBF00F20ACC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC3CDB4024717DBF00F20ACC /* netd.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = netd.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +70,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CC3CDB3224717DBE00F20ACC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC3CDB3824717DBE00F20ACC /* NetworkExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -42,6 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				CC3CDB05247174EE00F20ACC /* Networkman */,
+				CC3CDB3924717DBE00F20ACC /* netd */,
+				CC3CDB3624717DBE00F20ACC /* Frameworks */,
 				CC3CDB04247174ED00F20ACC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				CC3CDB03247174ED00F20ACC /* Networkman.app */,
+				CC3CDB3524717DBE00F20ACC /* io.github.dyumin.Networkman.netd.systemextension */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +116,26 @@
 			path = Networkman;
 			sourceTree = "<group>";
 		};
+		CC3CDB3624717DBE00F20ACC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC3CDB3724717DBE00F20ACC /* NetworkExtension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CC3CDB3924717DBE00F20ACC /* netd */ = {
+			isa = PBXGroup;
+			children = (
+				CC3CDB3A24717DBE00F20ACC /* FilterPacketProvider.h */,
+				CC3CDB3B24717DBE00F20ACC /* FilterPacketProvider.m */,
+				CC3CDB3D24717DBE00F20ACC /* main.m */,
+				CC3CDB3F24717DBF00F20ACC /* Info.plist */,
+				CC3CDB4024717DBF00F20ACC /* netd.entitlements */,
+			);
+			path = netd;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -80,15 +146,34 @@
 				CC3CDAFF247174ED00F20ACC /* Sources */,
 				CC3CDB00247174ED00F20ACC /* Frameworks */,
 				CC3CDB01247174ED00F20ACC /* Resources */,
+				CC3CDB4424717DBF00F20ACC /* Embed System Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CC3CDB4224717DBF00F20ACC /* PBXTargetDependency */,
 			);
 			name = Networkman;
 			productName = Networkman;
 			productReference = CC3CDB03247174ED00F20ACC /* Networkman.app */;
 			productType = "com.apple.product-type.application";
+		};
+		CC3CDB3424717DBE00F20ACC /* netd */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC3CDB4724717DBF00F20ACC /* Build configuration list for PBXNativeTarget "netd" */;
+			buildPhases = (
+				CC3CDB3124717DBE00F20ACC /* Sources */,
+				CC3CDB3224717DBE00F20ACC /* Frameworks */,
+				CC3CDB3324717DBE00F20ACC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = netd;
+			productName = netd;
+			productReference = CC3CDB3524717DBE00F20ACC /* io.github.dyumin.Networkman.netd.systemextension */;
+			productType = "com.apple.product-type.system-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -100,6 +185,9 @@
 				ORGANIZATIONNAME = "Alexey Dyumin";
 				TargetAttributes = {
 					CC3CDB02247174ED00F20ACC = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					CC3CDB3424717DBE00F20ACC = {
 						CreatedOnToolsVersion = 11.4.1;
 					};
 				};
@@ -118,6 +206,7 @@
 			projectRoot = "";
 			targets = (
 				CC3CDB02247174ED00F20ACC /* Networkman */,
+				CC3CDB3424717DBE00F20ACC /* netd */,
 			);
 		};
 /* End PBXProject section */
@@ -129,6 +218,13 @@
 			files = (
 				CC3CDB0D247174EF00F20ACC /* Assets.xcassets in Resources */,
 				CC3CDB10247174EF00F20ACC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC3CDB3324717DBE00F20ACC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,7 +241,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CC3CDB3124717DBE00F20ACC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC3CDB3E24717DBF00F20ACC /* main.m in Sources */,
+				CC3CDB3C24717DBE00F20ACC /* FilterPacketProvider.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CC3CDB4224717DBF00F20ACC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC3CDB3424717DBE00F20ACC /* netd */;
+			targetProxy = CC3CDB4124717DBF00F20ACC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CC3CDB0E247174EF00F20ACC /* Main.storyboard */ = {
@@ -309,6 +422,46 @@
 			};
 			name = Release;
 		};
+		CC3CDB4524717DBF00F20ACC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = netd/netd.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UCTQDPM624;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = netd/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.dyumin.Networkman.netd;
+				PRODUCT_NAME = "$(inherited)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		CC3CDB4624717DBF00F20ACC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = netd/netd.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UCTQDPM624;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = netd/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.dyumin.Networkman.netd;
+				PRODUCT_NAME = "$(inherited)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -326,6 +479,15 @@
 			buildConfigurations = (
 				CC3CDB18247174EF00F20ACC /* Debug */,
 				CC3CDB19247174EF00F20ACC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC3CDB4724717DBF00F20ACC /* Build configuration list for PBXNativeTarget "netd" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC3CDB4524717DBF00F20ACC /* Debug */,
+				CC3CDB4624717DBF00F20ACC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
