@@ -29,7 +29,7 @@
 	<key>NetworkExtension</key>
 	<dict>
 		<key>NEMachServiceName</key>
-		<string>$(TeamIdentifierPrefix)com.example.app-group.MySystemExtension</string>
+		<string>$(TeamIdentifierPrefix)io.github.dyumin.networkman</string>
 		<key>NEProviderClasses</key>
 		<dict>
 			<key>com.apple.networkextension.filter-packet</key>
